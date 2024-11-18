@@ -1,8 +1,9 @@
 <template>
-  <h1>Index page</h1>
+  <h1>Index page, {{ data }}</h1>
 </template>
 
 <script setup lang="ts">
+const { data } = await useFetch('/api')
 useHead({
   title: 'Index',
   meta: [
